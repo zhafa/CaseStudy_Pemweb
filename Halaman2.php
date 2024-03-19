@@ -11,9 +11,12 @@
     <!-- Memanggil file header dari folder template -->
     <?php include 'template/Header.html'?>
     
+    <!-- container untuk layout dasar -->
     <div class="container mt-4">
+        <!-- posisi untuk tulisan -->
         <h1 class="text-center mb-4">Halaman 2 - Hasil Perhitungan Future Value Annuity Due</h1>
         <div class="alert alert-primary" role="alert" id="hasil">
+            <!--  Rumus Future Value yang di sederhanakan  -->
             <?php
             function annuityDueFutureValue($C, $i, $n) {
                 $FV = $C * ((pow(1 + $i, $n) - 1) / $i) * (1 + $i);
