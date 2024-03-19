@@ -6,52 +6,62 @@
     <title>Kelompok 11 - Menghitung Future Value Annuity Due</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .calculator {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: #EEEEEE;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <!-- Memanggil file header dari folder template -->
-  <?php include 'template/Header.html'?>
-  
-  <!-- Judul dibawah form -->
-    <div class="container mt-4">
-      <h1>Halaman 1 - Menghitung Future Value Annuity Due</h1>
-      <form action="Halaman2.php" method="GET">
-    </div>
-  
-  <!-- membuat form input data -->
-  <div class="container">
-<!-- form 1 -->
-    <div class="mb-3">
-          <label for="payment" class="form-label"><b>Pembayaran Periode (bulan)</b></label>
-          <input type="number" class="form-control" id="payment" name="payment" step="any" required>
-          <p style="color: grey">Contoh : 12 juta pertahun / 12 bulan = Rp. 1.000.000</p>
-        </div>
-      
-      <!-- form 2 -->
-        <div class="mb-3">
-          <label for="interest" class="form-label"><b>Tingkat Bunga Pertahun (Bulan)</b></label>
-          <input type="float" class="form-control" id="interest" name="interest" step="any" required>
-          <p style="color: grey">Contoh : 15% pertahun = 0.012 Perbulan</p>
-        </div>
-      
-      <!-- form 3 -->
-        <div class="mb-3">
-          <label for="periods" class="form-label"><b>Jumlah Periode (bulan)</b></label>
-          <input type="number" class="form-control" id="periods" name="periods" required>
-          <p style="color: grey">Contoh: 1 periode = 12 Bulan </p>
-        </div>
-      
-        <!-- tombol untuk submit -->
-        <button type="submit" class="btn btn-primary">Hitung Future Value</button>
-      </form>
-    </div>
-  </div>
-  
+    <!-- Memanggil file header dari folder template -->
+    <?php include 'template/Header.html'?>
 
-  <!-- Memanggil file footer dari folder template -->
-  <?php include "template/Footer.html" ?>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="calculator"  ">
+                    <h3 class="text-center mb-4">Kalkulator Future Value Annuity Due</h3>
+                    <form action="Halaman2.php" method="GET">
+                        <div class="mb-3">
+                            <label for="payment" class="form-label">Pembayaran Periode (bulan)</label>
+                            <input type="number" class="form-control" id="payment" name="payment" step="any" required>
+                            <p>Contoh: 12 juta pertahun / 12 bulan = Rp. 1.000.000</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="interest" class="form-label">Tingkat Bunga Pertahun (Bulan)</label>
+                            <input type="number" class="form-control" id="interest" name="interest" step="any" required>
+                            <p>Contoh: 15% pertahun = 0.012 Perbulan</p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="periods" class="form-label">Jumlah Periode (bulan)</label>
+                            <input type="number" class="form-control" id="periods" name="periods" required>
+                            <p>Contoh: 1 periode = 12 Bulan</p>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Hitung</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</div>
+    <!-- Memanggil file footer dari folder template -->
+    <?php include "template/footers.html" ?>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
